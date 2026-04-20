@@ -27,18 +27,18 @@ const textylia = (self) => {
 }
 
 const modalShow = () => {
-    showModal.style.visibility = "visible"
+    showModal.style.display = "block"
 };
 const hideModal = () => {
-    showModal.style.visibility = "hidden"
+    showModal.style.display = "none"
 }
 
 const editNote = () => {
-    showModalEdit.style.visibility = "visible";
+    showModalEdit.style.display = "block";
     textylia();
 }
 const hideModalEdit = () => {
-    showModalEdit.style.visibility = "hidden";
+    showModalEdit.style.display = "none";
 }
 const deleteNote = (self) => {
     self.parentNode.remove();
@@ -62,7 +62,7 @@ const addNote2 = () => {
     const nodeDivTxt = `
     <button class="notes__board-note-close" onclick="deleteNote(this)"><i class="fa-solid fa-xmark"></i></button>
     <h1>${inputValue}</h1>
-    <p>${textAreaValue} <button class="notes__board-note-edit" onclick="editNote(this)"><i class="fa-solid fa-pen"></i></button></p>`;
+    <p>${textAreaValue}<button class="notes__board-note-edit" onclick="editNote(this)"><i class="fa-solid fa-pen"></i></button></p>`;
 
      const div1 = document.createElement("div");
      div1.classList.add("notes__board-note");
@@ -79,7 +79,7 @@ const addNote2 = () => {
 
 
     console.log(selectedValue);
-    showModal.style.visibility = "hidden";
+    showModal.style.display = "none";
     errorInfo.style.display = "none"
     input.value = "";
     textArea.value = "";

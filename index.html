@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/3c49f37e81.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Aplikacja myNotes</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="notes">
+            <div class="notes__options">
+                <div class="notes__options-logo"><i class="fa-regular fa-clipboard"></i>myNotes</div>
+                <div class="notes__options-buttons">
+                    <p class="noteCounter"></p>
+                    <button class="btn-send"><i class="fa-solid fa-plus"></i>Dodaj notatkę</button>
+                    <button class="btn-delete"><i class="fa-solid fa-trash"></i>Wyczyść</button>
+                </div>
+            </div>
+            <div class="notes__board">
+                <!-- <div class="notes__board-note">
+                    <button class="notes__board-note-close"><i class="fa-solid fa-xmark"></i></button>
+                    <h1>Tytuł notatki</h1>
+                    <p>lorem ipsum lorem ipsum</p>
+                </div> -->
+            </div>
+        <div class="modal-add">
+            <div class="modal__window">
+                <div class="modal__window-close"><i class="fa-solid fa-xmark"></i></div>
+                <h1>Dodaj notatkę</h1>
+                <label for="category" class="">Wybierz kategorię</label>
+                <select id="category" onchange="selectValue()">
+                <!-- <input type="text" class="modal__options-modal1" placeholder="Wybierz kategorię"> -->
+                <option value="0"- disabled selected>Wybierz kategorię</option>
+                <option value="1">Praca</option>
+                <option value="2">Zakupy</option>
+                <option value="3">Dom</option>
+                </select>
+                <input type="text" class="notes__modal-window-input" placeholder="Wpisz tytuł notatki">
+                <p class="heading-error">Wpisz treść</p>
+                <textarea name="" id="textArea"></textarea>
+                <button class="btn-add-note">Dodaj notatkę</button>
+            </div>
+        </div>
+        <div class="modal-edit">
+            <div class="modal__window">
+                <div class="modal__window-close-edit"><i class="fa-solid fa-xmark"></i></div>
+                <p>Wpisz poprawny tekst notatki</p>
+                <textarea name="" id="textAreaEdit"></textarea>
+                <button class="btn-edit-note">Zmień treść</button>
+            </div>
+        </div>
+        <p></p>
+        </div>
+    </div>
+                    <!-- każdy wiersz powinien mieć swojego diva który by mógł rosnąc, wtedy unikamy problemu z kolejną linią która będzie się zaczynała tak jak każda i  ewentualnie nth-child na div?-->
+
+
+    <script src="app.js"></script>
+</body>
+</html>

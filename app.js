@@ -20,10 +20,8 @@ let cardId = 0;
 
 let counter = 0;
 
-const textylia = (self) => {
-    kokos = "";
-    self.textContent = kokos;
-    console.log(kokos);
+const editNoteFunction = (self) => {
+    console.log(self.parentNode);
 }
 
 const modalShow = () => {
@@ -35,7 +33,7 @@ const hideModal = () => {
 
 const editNote = () => {
     showModalEdit.style.display = "block";
-    textylia();
+    editNoteFunction();
 }
 const hideModalEdit = () => {
     showModalEdit.style.display = "none";
